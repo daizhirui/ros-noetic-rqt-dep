@@ -7,7 +7,7 @@ pkgname='ros-noetic-rqt-dep'
 pkgver='0.4.12'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -34,9 +34,10 @@ depends=(
 	python-rospkg
 )
 
-_dir="rqt_dep-${pkgver}/"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_dep/archive/${pkgver}.tar.gz")
-sha256sums=('9a69cda0491aa8b1239c9aa9d8b5bb9f38827d85f5d60fecfd3a2a4636e1af92')
+_commit="ebf0f6ea572d772f8c4d1bbc78b56d48cea699d1"
+_dir="rqt_dep-${_commit}/"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_dep/archive/${_commit}.tar.gz")
+sha256sums=('80670f235c5d2494c103d211fb9392ca12ad289fde5f32a11db90b64d37ce41b')
 
 build() {
 	# Use ROS environment variables.
